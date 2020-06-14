@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>登录页面</title>
+    <style type="text/css">
+        .notice {
+            background-color: #F5DEB3;
+            font-size: 25px;
+            text-align: center;
+        }
+        .registerArea {
+            width: 400px;
+            position: absolute;
+            margin-left: -200px;
+            margin-top: -80px;
+            top: 30%;
+            left: 50%;
+            display: block;
+            z-index: 2000;
+            border: 4px solid #006699;
+        }
+        .footer {
+             background-color: #F5DEB3;
+             text-align: center;
+        }      
+    </style>
+</head>
+<body>    
+    <div class="registerArea">
+        <div class="notice">
+            <b><i>登 录 信 息</i></b>
+        </div>
+
+        <div class="input">
+            <!-- 表单本身是不可见的。并且注意一个文本字段的默认宽度是20个字符 -->
+            <form name="input" action="mailto:2265636492@qq.com" method="post" enctype="text/plain">
+                <table border="0" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <td>用户名：</td>
+                        <td><input type="text" name="username" /></td>
+                    </tr>
+                    <tr>
+                        <td>密 码：</td>
+                        <td><input type="password" name="password" /></td>
+                    </tr>
+                    <tr>
+                        <td>性 别：</td>
+                        <td>
+                            <!--同一组的单选按钮，name 取值一定要一致，这样同一组的单选按钮才可以起到单选的作用-->
+                            <input type="radio" name="sex" value="male" checked="checked"/>男
+                            <input type="radio" name="sex" value="female" />女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>省 份：</td>
+                        <td>
+                            <select name="provinces" style="width:150px;">
+                                <option value="jiangsu">江苏省</option>
+                                <option value="sichaun">四川省</option>
+                                <option value="anhui" selected>安徽省</option>
+                                <option value="shanxi">陕西省</option>
+                                <option value="hebei">河北省</option>
+                                <option value="fujian">福建省</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>市 县：</td>
+                        <td>
+                            <select name="city" style="width:150px;">
+                                <option value="nanjing">南京市</option>
+                                <option value="chengdu">成都市</option>
+                                <option value="hefei" selected>合肥市</option>
+                                <option value="xian">西安市</option>
+                                <option value="shijiazhuang">石家庄</option>
+                                <option value="xiamen">厦门市</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>爱 好：</td>
+                        <td>
+                            <input type="checkbox" name="hobby" value="movie" />看电影
+                            <input type="checkbox" name="hobby" value="swim" />游泳
+                            <input type="checkbox" name="hobby" value="read" checked/>看书
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>自我介绍：</td>
+                        <td>
+                            <textarea name="introdution" rows="5" cols="22">请简单介绍一下自己吧！</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <!--submit是button的一个特例，也是button的一种，它把提交这个动作自动集成了-->
+                            <input type="submit" value="确定" style="width:90px;height:40px;background-color:#AFEEEE;" />
+                            <input type="reset" value="重置" style="width:90px;height:40px;background-color:#AFEEEE;" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div> 
+
+        <div class="footer">
+            版权 &#169; bingo.com
+        </div>  
+            
+    </div>
+    
+</body>
+</html>

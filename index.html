@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- 使用 <meta> 元素来描述HTML文档的描述，关键词，作者，字符集等 -->
+    <meta charset="utf-8"/>
+    <meta name="description" content="练习HTML的页面"/>
+    <meta name="keywords" content="html,css..."/>
+    <meta name="author" content="Lee"/>
+    <title>首页面</title>
+    <style type="text/css">
+        h2{background-color:cadetblue}
+        p{color:chocolate}
+    </style>
+</head>
+<!-- 注意：所有连续的空格或空行都会被算作一个空格，可以用<pre>进行控制 -->
+<body>
+    <!-- 显示器只显示body中的内容 -->
+    <h1 style="text-align:center;"><i>Written By <del>Libing</del><ins>Lee</ins></i></h1>
+    <!-- 浏览器会自动地在标题的前后添加空行 -->
+    <hr />    
+    <div id="container" style="width:1000px;border:2px solid #000000;margin-top:0;">
+
+        <div id="header" style="background-color:#FFA500;">
+            <h1 style="text-align:center;margin-bottom:0;">网页标题</h1>
+        </div>
+
+        <div id="menu" style="background-color:#FFD700;width:100px;height:700px;float:left;">
+            <b>菜单</b><br />
+            <a href="temp.html" target="iframe_a">欢迎页面</a><br />
+            HTML<br />
+            CSS<br />
+            JavaScript<br />
+            <a href="test.html" target="iframe_a">测试页面</a><br />
+            <a href="register.html" target="iframe_a">注册页面</a>
+        </div>
+
+        <div id="content" style="background-color:#EEEEEE;width:900px;height:700px;float:left;">
+            <iframe src="temp.html" name="iframe_a" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
+        <div id="footer" style="background-color:#FFA500;text-align:center">
+            版权 © bingo.com
+        </div>
+
+    </div>   
+    
+
+
+
+    <hr />
+</body>
+</html>

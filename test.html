@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- 使用 <meta> 元素来描述HTML文档的描述，关键词，作者，字符集等 -->
+    <meta charset="utf-8"/>
+    <meta name="description" content="练习HTML的页面"/>
+    <meta name="keywords" content="html,css..."/>
+    <meta name="author" content="Lee"/>
+    <title>测试页面</title>
+    <style type="text/css">
+        h2{background-color:cadetblue}
+        p{color:chocolate}
+    </style>
+</head>
+<!-- 注意：所有连续的空格或空行都会被算作一个空格，可以用<pre>进行控制 -->
+<body>
+    <!-- 显示器只显示body中的内容 -->
+    <h1 style="text-align:center;"><i>Written By <del>Libing</del><ins>Lee</ins></i></h1>
+    <!-- 浏览器会自动地在标题的前后添加空行 -->
+    <hr />
+    <h2>这是第二个标题</h2>
+    <!-- 浏览器会自动地在段落的前后添加空行。</p> 是块级元素） -->
+    <p style="font-size:30px;color:grey;">这是第一个段落</p>
+    <a href="https://www.runoob.com" style="text-decoration:none;">
+        <i><b>菜鸟教程</b></i>
+    </a>
+    <br /> 
+    <p>Fuji Mountain</p>
+    <img src="/images/fujisan.jpg" alt="fujisan" height="120" width="192" />
+    <br /> 
+    <a id="tips">有用的提示部分</a> 
+    <a href="#tips">指向有用的提示部分</a>
+    <a href="mailto:2265636492@qq.com?subject=这是%20邮件的主题&body=这是%20邮件的内容" 
+       rel="nofollow">发送邮件</a>
+    <br /> 
+    <!-- 如果不定义边框属性，表格将不显示边框 -->
+    <table border="1" cellpadding="10" cellspacing="0">
+        <caption>表格一</caption>
+        <tr>
+            <th>第一列</th>
+            <th>第二列</th>
+        </tr>
+        <tr>
+            <td>行1,列1</td>
+            <td>行1,列2</td>
+        </tr>
+        <tr>
+            <td colspan="2">行2,列1</td>
+        </tr>
+        <tr>
+            <td>行3,列1</td>
+            <td rowspan="2">行3,列2</td>
+        </tr>
+        <tr>
+            <td>行4,列1</td>
+        </tr>
+    </table>
+    <table cellspacing="1" cellpadding="5" border="1">
+        <caption>表格二</caption>
+        <tr>
+            <td>日常水果
+                <ul style="list-style-type:square">
+                    <li>香蕉</li>
+                    <li>梨</li>
+                    <ul>
+                        <li>青皮梨</li>
+                        <li>雪梨</li>
+                    </ul>
+                    <li>苹果</li>
+                    <ul>
+                        <li>青苹果</li>
+                        <li>红苹果</li>
+                    </ul>
+                    <li>西瓜</li>                    
+                </ul>
+            </td>
+            <td>
+                普通饮料
+                <ol start="3">
+                    <li>水</li>
+                    <li>牛奶</li>
+                    <li>咖啡</li>
+                    <li>果汁</li>
+                </ol>
+            </td>
+            <td>
+                省会城市
+                <dl>
+                    <dt>南京</dt>
+                    <dd>-江苏省</dd>
+                    <dt>成都</dt>
+                    <dd>-四川省</dd>
+                    <dt>合肥</dt>
+                    <dd>-安徽省</dd>
+                </dl>
+            </td>
+        </tr>
+    </table>
+    <p id="demo">点击“置换”改变，点击“刷新”返回</p>
+    <!-- 您只能在 HTML 输出流中使用 document.write。 如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档 -->
+    <script>
+        document.write("Hello World!")        
+        document.write("<p>输出段落</p>")
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        }
+        function refreshText() {
+            document.getElementById("demo").innerHTML = "点击“置换”改变，点击“刷新”返回";
+        }
+    </script>
+    <button type="button" onclick="changeText()">置换</button>
+    <button type="button" onclick="refreshText()">刷新</button>
+    <noscript>抱歉，你的浏览器不支持JavaScript</noscript>
+    <p>不支持 JavaScript 的浏览器会使用&lt;noscript&gt; 元素中定义的内容（文本）来替代。</p>
+
+
+    <hr />
+</body>
+</html>

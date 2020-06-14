@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5测试页面</title>
+</head>
+<body>
+    <h1 style="background-color:#FFEE99;text-align:center;"><i>HTML5练习</i></h1>
+    <h4><b>Canvas 画布</b></h4>
+    <hr />
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <td rowspan="2">1.Canvas上画矩形</td>
+            <td>
+                <span style="font-size:8px;">径向/圆渐变</span><br />
+                <!-- <canvas> 标签只是图形容器，您必须使用脚本来绘制图形 -->
+                <!-- 标签通常需要指定一个id属性 (脚本中经常引用) -->
+                <canvas id="canvasRect1" width="200" height="60"
+                        style="border:1px solid #000000;">
+                    您的浏览器不支持 HTML5 canvas 标签。
+                </canvas>
+            </td>
+            <td rowspan="2">
+                &lt;canvas&gt;标签只是图形容器，您必须使用脚本来绘制图形。<br />
+                标签通常需要指定一个id属性 (脚本中经常引用)。<br />
+                <b>笔触和填充决定的形状如何绘制。Stroke（笔触）是一个形状的轮廓。Fill（填充）是在形状内部的内容</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span style="font-size:8px;">线条渐变</span><br />
+                <canvas id="canvasRect2" width="200" height="60"
+                        style="border:1px solid #000000;">
+                    您的浏览器不支持 HTML5 canvas 标签。
+                </canvas>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2.Canvas上画线</td>
+            <td>
+                <canvas id="canvasLine" width="200" height="60"
+                        style="border:1px solid #000000;">
+                    您的浏览器不支持 HTML5 canvas 标签。
+                </canvas>
+            </td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">3.Canvas上画圆形/弧线</td>
+            <td>
+                <canvas id="canvasCircle1" width="200" height="60"
+                        style="border:1px solid #000000;">
+                    您的浏览器不支持 HTML5 canvas 标签。
+                </canvas>
+            </td>
+            <td rowspan="2">                
+                <table border="0">
+                    <tr>
+                        <td>
+                            <!-- 画一个太极 -->
+                            <canvas id="canvasTaiji" width="120" height="120"
+                                    style="border:1px solid #000000;background-color:#E1E1FF;">
+                                您的浏览器不支持 HTML5 canvas 标签。
+                            </canvas>
+                        </td>
+                        <td>
+                            arc() 方法创建弧/曲线（用于创建圆或部分圆）<br />
+                            如需通过 arc() 来创建圆,请把起始角设置为 0，结束角设置为 2*Math.PI<br />
+                            context.arc(x,y,r,startAngle,endAngle,counterclockwise);<br />
+                            x:圆的中心的 x 坐标;y:圆的中心的 y 坐标;r:圆的半径<br />
+                            startAngle:起始角，以弧度计。（弧的圆形的三点钟位置是 0 度）;endAngle:结束角，以弧度计<br />
+                            counterclockwise:可选。规定应该逆时针还是顺时针绘图。False(默认)= 顺时针，true= 逆时针。
+                        </td>
+                        <td>
+                            HTML5 Canvas Arc 说明：<br />
+                            <img src="../images/HTML5CanvasArc.png" width="360" height="208"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <canvas id="canvasCircle2" width="200" height="60"
+                        style="border:1px solid #000000;">
+                    您的浏览器不支持 HTML5 canvas 标签。
+                </canvas>
+            </td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">4.Canvas上绘制文本</td>
+            <td>
+                <canvas id="canvasText1" width="200" height="60"
+                        style="border:1px solid #000000;">
+                    您的浏览器不支持 HTML5 canvas 标签。
+                </canvas>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <canvas id="canvasText2" width="200" height="60"
+                        style="border:1px solid #000000;">
+                    您的浏览器不支持 HTML5 canvas 标签。
+                </canvas>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5.Canvas上放置图像</td>
+            <td>
+                <canvas id="canvasImage" width="200" height="120"
+                        style="border:1px solid #000000;">
+                    您的浏览器不支持 HTML5 canvas 标签。
+                </canvas>
+            </td>
+        </tr>
+    </table>
+    <hr />  
+    <!-- 引用外部的 JavaScript -->
+    <!-- 注意：我这里写的script标签放在head里或者table标签前都无效！！ -->
+    <script type="text/javascript" src="../js/canvas.js"></script>
+</body>
+</html>
