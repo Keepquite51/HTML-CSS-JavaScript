@@ -47,8 +47,91 @@
     <div id="subDiv2" ondragover="allowDrag(event)" ondrop="drop(event)">
     </div>
 </div>
-
-
+<video width="320" height="240" controls>
+    <source src="../videos/bear.mp4" type="video/mp4">\
+    您的浏览器不支持 HTML5 video 标签。
+</video>
+<audio controls>
+    <source src="../audios/horse.ogg" type="audio/ogg">
+    您的浏览器不支持 audio 元素。
+</audio>
+<br/>
+<hr/>
+<table border="1" cellpadding="6" cellspacing="0" style="background-color: #f0efa5;margin-left: auto;margin-right: auto;">
+    <caption>HTML5 新的 Input 类型</caption>
+    <tr>
+        <td>
+            <!--TODO form_action.html-->
+            <form action="form_action.html">
+                <table>
+                    <tr>
+                        <td>选择你喜欢的颜色：</td>
+                        <td><input type="color" name="favColor"></td>
+                    </tr>
+                    <tr>
+                        <td>生日：</td>
+                        <td><input type="date" name="bday"></td>
+                    </tr>
+                    <tr>
+                        <td>生日 (日期和时间)：</td>
+                        <td><input type="datetime" name="bdaytime1"></td>
+                    </tr>
+                    <tr>
+                        <td>生日 (日期和时间)：</td>
+                        <td><input type="datetime-local" name="bdaytime2"></td>
+                    </tr>
+                    <tr>
+                        <td>Email：</td>
+                        <!--注意: Internet Explorer 9 及更早 IE 版本不支持 type="email" 。-->
+                        <td><input type="email" name="usremail"></td>
+                    </tr>
+                    <tr>
+                        <td>生日 ( 月和年 )：</td>
+                        <td><input type="month" name="bdaymonth"></td>
+                    </tr>
+                    <tr>
+                        <td>数量（1~5）：</td>
+                        <!--注意:Internet Explorer 9 及更早 IE 版本不支持 type="number" 。-->
+                        <!--number 类型用于应该包含数值的输入域。-->
+                        <td><input type="number" name="quantity" min="1" max="5"></td>
+                    </tr>
+                    <tr>
+                        <td>点数（1~10）：</td>
+                        <!--定义一个不需要非常精确的数值（类似于滑块控制）-->
+                        <td><input type="range" name="points" min="1" max="10"></td>
+                    </tr>
+                    <tr>
+                        <td>电话号码：</td>
+                        <!--定义输入电话号码字段-->
+                        <td><input type="tel" name="usrtel"></td>
+                    </tr>
+                    <tr>
+                        <td>选择时间：</td>
+                        <td><input type="time" name="usrtime"></td>
+                    </tr>
+                    <tr>
+                        <td>添加你的主页：</td>
+                        <!--url 类型用于应该包含 URL 地址的输入域。
+                        在提交表单时，会自动验证 url 域的值-->
+                        <td><input type="url" name="homepage"></td>
+                    </tr>
+                    <tr>
+                        <td>选择周：</td>
+                        <!--week 类型允许你选择周和年-->
+                        <td><input type="week" name="year_week"></td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">
+            <input type="submit" style="width: 150px;height: 35px;">
+        </td>
+    </tr>
+</table>
+<hr/>
+你最喜欢的颜色值为：<p id="colorSpan">//TODO</p>
 
 </body>
 </html>
