@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript练习</title>
+</head>
+<body>
+<script>
+    function changeImage() {
+        element = document.getElementById("myimage");
+        if(element.src.match("bulboff")){
+            element.src = "../images/pic_bulbon.gif";
+        }
+        else{
+            element.src = "../images/pic_bulboff.gif";
+        }
+    }
+    function changeColor() {
+        var element = document.getElementById("text1");
+        element.style.color = "red";
+    }
+    function checkAge() {
+        var x = document.getElementById("age").value;
+        if(isNaN(x) || x.replace(/(^\s*)|(\s*$)/g,"")===""){
+            alert("请输入数字！")
+        }
+    }
+</script>
+<img id="myimage" onclick="changeImage()" src="../images/pic_bulboff.gif"
+    width="100" height="180"/>
+<p id="text1">点击按钮改变颜色</p>
+<button type="button" onclick="changeColor()">点击</button><br/>
+<input type="text" id="age"/>
+<button type="button" onclick="checkAge()">检查</button>
+</body>
+</html>

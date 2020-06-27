@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS练习</title>
+    <style>
+        h1{
+            /*文本排列text-align属性是用来设置文本的 水平 对齐方式*/
+            text-align: center;
+            /*对于W3C标准的CSS：如果你定义了颜色属性，你还必须定义背景色属性*/
+            color: coral;
+        }
+        body{
+            background: #ffffff url("../images/scream.jpg")
+                        no-repeat right 15px bottom 50px;
+        }
+        p.uppercase{
+            text-decoration: overline;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            word-spacing: 5px;
+        }
+        p.lowercase{
+            text-decoration: line-through;
+            text-transform: lowercase;
+            letter-spacing: -3px;
+            /*rtl:right to left
+              ltr:left to right*/
+            direction: rtl;
+        }
+        p.whiteSpace{white-space: nowrap;}
+        p.capitalize{text-decoration: underline;text-transform: capitalize;}
+        p#indentText{text-indent: 50px;}
+        p.small{line-height: 50%;}
+        p.big{line-height: 200%;}
+        img.top{vertical-align: text-top;}
+        img.bottom{vertical-align: text-bottom;}
+        p.textShadow{text-shadow: 2px 2px cornflowerblue;}
+    </style>
+</head>
+<body>
+<h1>
+    CSS练习
+</h1>
+<p class="uppercase">This is some text</p>
+<p class="lowercase">This is some text</p>
+<p class="capitalize">This is some text</p>
+<p id="indentText">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+
+<p class="small">
+    这是一个更小行高的段落。<br>
+    这是一个更小行高的段落。<br>
+    这是一个更小行高的段落。<br>
+</p>
+<p class="whiteSpace">
+    这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+</p>
+<p class="big">
+    这是一个更大行高的段落。<br>
+    这是一个更大行高的段落。<br>
+    这是一个更大行高的段落。<br>
+</p>
+<p>一个<img src="../images/logo.png" alt="w3cschool" width="270" height="50">默认对齐的图像。</p>
+<p>一个<img class="top" src="../images/logo.png" alt="w3cschool" width="270" height="50">  text-top 对齐的图像。</p>
+<p>一个<img class="bottom" src="../images/logo.png" alt="w3cschool" width="270" height="50"> text-bottom 对齐的图像。</p>
+<p class="textShadow">Text-shadow 效果</p>
+</body>
+</html>
