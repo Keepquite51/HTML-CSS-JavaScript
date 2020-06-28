@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js测试</title>
+</head>
+<body>
+<h3>JavaScript 正则表达式</h3>
+<!--正则表达式是由一个字符序列形成的搜索模式-->
+<p>搜索字符串“runoob”，并显示匹配的起始位置：</p>
+<button type="button" onclick="myFunction1()" id="btn1">点我</button>
+<p id="demo1">Visit Microsoft microsoft!</p>
+<hr/>
+<button type="button" onclick="myFunction2()" id="btn2">点我</button>
+<p id="demo2">DisplayArea2</p>
+<p id="demo3">DisplayArea3</p>
+<script>
+    function myFunction1() {
+        var str = document.getElementById("demo1").innerHTML;
+        //在 JavaScript 中，正则表达式通常用于两个字符串方法 : search() 和 replace()
+        //var n = str.search(/Runoob/i);
+        var n = str.replace(/microSoft/i, "runoob");
+        document.getElementById("demo").innerHTML = n;
+    }
+    function myFunction2() {
+        //var patt1 = /e/;
+        var patt1 = new RegExp("e");
+        /*test() 方法用于检测一个字符串是否匹配某个模式，
+          如果字符串中含有匹配的文本，则返回 true，否则返回 false。
+        */
+        document.getElementById("demo2").innerHTML = patt1.test("The best things in life are free");
+        /*exec() 方法用于检索字符串中的正则表达式的匹配。
+          该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。
+        */
+        document.getElementById("demo3").innerHTML = /e/.exec("The best things in life are free!");
+    }
+</script>
+</body>
+</html>
